@@ -38,7 +38,7 @@ async function init() {
     .get(`https://api.github.com/users/${userName}`)
     .then((response) => console.log(response.data));
 
-  fs.appendFile("log.txt", userName, (err) => {
+  fs.appendFile("README.md", userName, (err) => {
     if (err) {
       console.log(err);
     } else {
