@@ -99,21 +99,21 @@ async function init() {
     .then((response) => {
       const generatedMarkdown =
       `# ${appTitle} README \n
-      ### **${response.data.name} \n
+      ### **${response.data.name}** \n
       ${appDescription} \n
       ![user picture](${response.data.avatar_url}) \n
-      ## ** Table of Contents ** \n
-      ## ** Install Guide ** \n
+      ## **Table of Contents** \n
+      ## **Install Guide** \n
       ${install} \n
-      ## ** Usage ** \n
+      ## **Usage** \n
       ${usage} \n
-      ## ** License ** \n
+      ## **License** \n
       ${license} \n
-      ## ** Contributors ** \n
+      ## **Contributors** \n
       ${contributing} \n
-      ## ** Tests ** \n
+      ## **Tests** \n
       ${tests} \n
-      ## ** Questions ** \n
+      ## **Questions** \n
       ${questions} \n
       
     ` 

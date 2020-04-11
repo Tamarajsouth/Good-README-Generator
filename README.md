@@ -1,36 +1,36 @@
-# kdkdk README 
+# A Good README.md Generator README 
 
-      ### **Tamara South 
+      ### **Tamara South** 
 
-      papapa 
+      Utilizes the Command Line Terminal using node.js and user input 
 
       ![user picture](https://avatars2.githubusercontent.com/u/60523597?v=4) 
 
-      ## ** Table of Contents ** 
+      ## **Table of Contents** 
 
-      ## ** Install Guide ** 
+      ## **Install Guide** 
 
-      mamamam 
+      ```node index.js``` 
 
-      ## ** Usage ** 
+      ## **Usage** 
 
-      nenenene 
+      use whenever you want to make a super README for your project 
 
-      ## ** License ** 
+      ## **License** 
 
       MIT 
 
-      ## ** Contributors ** 
+      ## **Contributors** 
 
-      oaoaoao 
+      helpful TAs and other friendly students and google 
 
-      ## ** Tests ** 
+      ## **Tests** 
 
-      lelele 
+      many performed by me 
 
-      ## ** Questions ** 
+      ## **Questions** 
 
-      papap 
+      no thanks 
 
       
     
