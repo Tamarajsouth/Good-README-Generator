@@ -1,14 +1,14 @@
-# Good README Generator README
+# good readme generator
 
       ### **Tamara South**
 
-      CLI application that takes user data and converts into a README.md file using node.js
+      uses user response and data to generate a decent readme utilizing node.js
 
       ![user picture](https://avatars2.githubusercontent.com/u/60523597?v=4
 
       ## **Table of Contents**
 
-      undefined
+      part 1, part 2, part 3, part 4
 
       ## **Install Guide**
 
@@ -16,7 +16,7 @@
 
       ## **Usage**
 
-      to use whenever you want to make a super README super easily
+      whenever you want to make a super readme for your super project
 
       ## **License**
 
@@ -24,7 +24,7 @@
 
       ## **Contributors**
 
-      helpful TAs, friendly classmates, and google
+      helpful TAs, friendly classmates, google
 
       ## **Tests**
 
