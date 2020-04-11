@@ -98,24 +98,24 @@ async function init() {
     .get(`https://api.github.com/users/${userName}`)
     .then((response) => {
       const generatedMarkdown =
-      `# ${appTitle} README \n
-      ### **${response.data.name}** \n
-      ${appDescription} \n
-      ![user picture](${response.data.avatar_url}) \n
-      ## **Table of Contents** \n
-      ## **Install Guide** \n
-      ${install} \n
-      ## **Usage** \n
-      ${usage} \n
-      ## **License** \n
-      ${license} \n
-      ## **Contributors** \n
-      ${contributing} \n
-      ## **Tests** \n
-      ${tests} \n
-      ## **Questions** \n
-      ${questions} \n
-      
+      `# ${appTitle}\n
+      ### **${response.data.name}**\n
+      ${appDescription}\n
+      ![user picture](${response.data.avatar_url}\n
+      ## **Table of Contents**\n
+      ${response.data.tableOfContents}\n
+      ## **Install Guide**\n
+      ${install}\n
+      ## **Usage**\n
+      ${usage}\n
+      ## **License**\n
+      ${license}\n
+      ## **Contributors**\n
+      ${contributing}\n
+      ## **Tests**\n
+      ${tests}\n
+      ## **Questions**\n
+      ${questions}\n      
     ` 
   writeToFile("README.md", generatedMarkdown);
 });

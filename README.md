@@ -1,36 +1,37 @@
-# A Good README.md Generator README 
+# Good README Generator README
 
-      ### **Tamara South** 
+      ### **Tamara South**
 
-      Utilizes the Command Line Terminal using node.js and user input 
+      CLI application that takes user data and converts into a README.md file using node.js
 
-      ![user picture](https://avatars2.githubusercontent.com/u/60523597?v=4) 
+      ![user picture](https://avatars2.githubusercontent.com/u/60523597?v=4
 
-      ## **Table of Contents** 
+      ## **Table of Contents**
 
-      ## **Install Guide** 
+      undefined
 
-      ```node index.js``` 
+      ## **Install Guide**
 
-      ## **Usage** 
+      ```node index.js```
 
-      use whenever you want to make a super README for your project 
+      ## **Usage**
 
-      ## **License** 
+      to use whenever you want to make a super README super easily
 
-      MIT 
+      ## **License**
 
-      ## **Contributors** 
+      MIT
 
-      helpful TAs and other friendly students and google 
+      ## **Contributors**
 
-      ## **Tests** 
+      helpful TAs, friendly classmates, and google
 
-      many performed by me 
+      ## **Tests**
 
-      ## **Questions** 
+      many performed by me
 
-      no thanks 
+      ## **Questions**
 
+      none at the moment
       
     
