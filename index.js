@@ -108,24 +108,24 @@ async function init() {
     .then((response) => {
       const generatedMarkdown = 
       `# ${appTitle}
-      ### ${response.data.name}
-      ${appDescription}
-      ![user picture](${response.data.avatar_url}
-      ## Table of Contents
-      ${tableOfContents}
-      ## Install Guide
-      ${install}
-      ## Usage
-      ${usage}
-      ## License
-      ${license}
-      ## Contributors
-      ${contributing}
-      ## Tests
-      ${tests}
-      ## Questions
-      ${questions}    
-    `;
+        # ${response.data.name}
+        ${appDescription}
+        ![user picture](${response.data.avatar_url}
+        ## **Table of Contents** 
+        ${tableOfContents}
+        ## **Install Guide** 
+        ${install}
+        ## **Usage** 
+        ${usage}
+        ## **License** 
+        ${license}
+        ## **Contributors** 
+        ${contributing}
+        ## **Tests** 
+        ${tests}
+        ## **Questions**
+        ${questions}
+       `;
       writeToFile("README.md", generatedMarkdown);
     });
 }
