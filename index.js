@@ -2,19 +2,28 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 const axios = require("axios");
 
-const userQuestions = ["What is your GitHub username?", "Title:", "Description:", "Table of Contents:", "Istallation:",
-"Usage:", "Licenses:", "Contributing:", "Tests:", "Questions:"];
-
+const userQuestions = [
+  "What is your GitHub username?",
+  "Title:",
+  "Description:",
+  "Table of Contents:",
+  "Installation:",
+  "Usage:",
+  "Licenses:",
+  "Contributing:",
+  "Tests:",
+  "Questions:",
+];
 
 function writeToFile(fileName, data) {
-  fs.writeFile(fileName, data, err => {
-      if (err) {
-          console.log(err)
-      } else {
-          console.log("Success");
-      }
-  })
-}  
+  fs.writeFile(fileName, data, (err) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log("Success");
+    }
+  });
+}
 
 async function init() {
   let userName;
@@ -27,7 +36,7 @@ async function init() {
   let contributing;
   let tests;
   let questions;
-   await inquirer
+  await inquirer
     .prompt([
       {
         type: "input",
@@ -62,8 +71,8 @@ async function init() {
       {
         type: "checkbox",
         message: userQuestions[6],
-        name: "license", 
-        choices: ["MIT", "GPLv3", "AGPL"] 
+        name: "license",
+        choices: ["MIT", "GPLv3", "AGPL"],
       },
       {
         type: "input",
@@ -82,43 +91,43 @@ async function init() {
       },
     ])
     .then((response) => {
-    userName = response.username;
-    appTitle = response.title;
-    appDescription = response.description;
-    tableOfContents = response.tableOfContents;
-    install = response.install;
-    usage = response.usage;
-    license = response.license;
-    contributing = response.contributing;
-    tests = response.tests;
-    questions = response.questions;
+      userName = response.username;
+      appTitle = response.title;
+      appDescription = response.description;
+      tableOfContents = response.tableOfContents;
+      install = response.install;
+      usage = response.usage;
+      license = response.license;
+      contributing = response.contributing;
+      tests = response.tests;
+      questions = response.questions;
     });
 
   await axios
     .get(`https://api.github.com/users/${userName}`)
     .then((response) => {
-      const generatedMarkdown =
+      const generatedMarkdown = 
       `# ${appTitle}
-      ### **${response.data.name}**
+      ### ${response.data.name}
       ${appDescription}
       ![user picture](${response.data.avatar_url}
-      ## **Table of Contents**
+      ## Table of Contents
       ${tableOfContents}
-      ## **Install Guide**
+      ## Install Guide
       ${install}
-      ## **Usage**
+      ## Usage
       ${usage}
-      ## **License**
+      ## License
       ${license}
-      ## **Contributors**
+      ## Contributors
       ${contributing}
-      ## **Tests**
+      ## Tests
       ${tests}
-      ## **Questions**
+      ## Questions
       ${questions}    
-    ` 
-  writeToFile("README.md", generatedMarkdown);
-});
+    `;
+      writeToFile("README.md", generatedMarkdown);
+    });
 }
 
 init();
