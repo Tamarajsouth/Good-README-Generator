@@ -15,6 +15,12 @@ const userQuestions = [
   "Questions:",
 ];
 
+let badgeArray = [
+  "![MIT](https://img.shields.io/apm/l/atomic-design-ui.svg)",
+  "![GPLv3](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)",
+  "![AGPL](https://img.shields.io/badge/license-AGPL-blue.svg)",
+];
+
 function writeToFile(fileName, data) {
   fs.writeFile(fileName, data, (err) => {
     if (err) {
@@ -26,22 +32,6 @@ function writeToFile(fileName, data) {
 }
 
 async function init() {
-  let userName;
-  let appTitle;
-  let appDescription;
-  let tableOfContents;
-  let install;
-  let usage;
-  let license;
-  let contributing;
-  let tests;
-  let questions;
-
-  let badgeArray = [
-    "![MIT](https://img.shields.io/apm/l/atomic-design-ui.svg?)",
-    "![GPLv3](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)",
-    "![AGPL](https://img.shields.io/badge/license-AGPL-blue.svg)"
-              ];
 
   await inquirer
     .prompt([
@@ -98,6 +88,7 @@ async function init() {
       },
     ])
     .then((response) => {
+      // console.log(JSON.stringify(response.license[0]));
       if (response.license === "MIT") {
         license = badgeArray[0];
     } else if (response.license === "GPLv3") {
