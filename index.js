@@ -15,18 +15,18 @@ const userQuestions = [
   "Questions:",
 ];
 
-let badgeArray = [
-  "![MIT](https://img.shields.io/apm/l/atomic-design-ui.svg)",
-  "![GPLv3](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)",
-  "![AGPL](https://img.shields.io/badge/license-AGPL-blue.svg)",
-];
+// let badgeArray = [
+//   "![MIT](https://img.shields.io/apm/l/atomic-design-ui.svg)",
+//   "![GPLv3](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)",
+//   "![AGPL](https://img.shields.io/badge/license-AGPL-blue.svg)",
+// ];
 
 function writeToFile(fileName, data) {
   fs.writeFile(fileName, data, (err) => {
     if (err) {
       console.log(err);
     } else {
-      console.log("Success");
+      console.log("Success README.md Generated");
     }
   });
 }
@@ -89,18 +89,19 @@ async function init() {
     ])
     .then((response) => {
       // console.log(JSON.stringify(response.license[0]));
-      if (response.license === "MIT") {
-        license = badgeArray[0];
-    } else if (response.license === "GPLv3") {
-        license = badgeArray[1];
-    } else { 
-        license = badgeArray[2];
-    };
+    //   if (response.license === "MIT") {
+    //     license = badgeArray[0];
+    // } else if (response.license === "GPLv3") {
+    //     license = badgeArray[1];
+    // } else { 
+    //     license = badgeArray[2];
+    // };
       userName = response.username;
       appTitle = response.title;
       appDescription = response.description;
       tableOfContents = response.tableOfContents;
       install = response.install;
+      license = response.license;
       usage = response.usage;
       contributing = response.contributing;
       tests = response.tests;

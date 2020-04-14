@@ -1,18 +1,18 @@
-# good readme
+# A GOOD README Generator
 # Tamara South
-a decent app cli node.js blah blah blah
+a decent CLI app that utilizes node.js and other dependencies 
 ![Tamara South picture](https://avatars2.githubusercontent.com/u/60523597?v=4)
 ## **Table of Contents** 
-i didn't do this part right
+I messed up this part. OOPS!
 ## **Install Guide** 
 ```node index.js```
 ## **Usage** 
-whatever
+use if you want to make life *questionably* easier by writing a README doc in the command line instead of the traditional way
 ## **License** 
-![AGPL](https://img.shields.io/badge/license-AGPL-blue.svg)
+MIT
 ## **Contributors** 
-no
+me, helpful TAs, friendly classmates, google
 ## **Tests** 
-no
+many performed by me 
 ## **Questions**
-no
+no thank you byeeeee
